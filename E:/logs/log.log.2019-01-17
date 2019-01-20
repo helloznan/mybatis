@@ -1,0 +1,255 @@
+2019-01-17 23:14:00  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:14:02  [ main:2212 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:14:02  [ main:2220 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:14:02  [ main:2227 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1424188812 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will be managed by Spring
+2019-01-17 23:14:02  [ main:2232 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:14:02  [ main:2271 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:14:02  [ main:2276 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:14:02  [ main:2290 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:14:02  [ main:2291 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762] from current transaction
+2019-01-17 23:14:02  [ main:2317 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:14:02  [ main:2322 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:14:02  [ main:2322 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:14:02  [ main:2348 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:14:02  [ main:2351 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119]
+2019-01-17 23:14:02  [ main:2364 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@606826010 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will be managed by Spring
+2019-01-17 23:14:02  [ main:2365 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:14:02  [ main:2368 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:14:02  [ main:2387 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:14:02  [ main:2388 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119]
+2019-01-17 23:14:02  [ main:2389 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119] from current transaction
+2019-01-17 23:14:02  [ main:2389 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:14:02  [ main:2390 ] - [ DEBUG ]  ==> Parameters: jim_1547738042976(String), 1(Long)
+2019-01-17 23:14:02  [ main:2397 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:14:02  [ main:2399 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119]
+2019-01-17 23:14:02  [ main:2401 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119]
+2019-01-17 23:14:02  [ main:2402 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73844119]
+2019-01-17 23:14:03  [ main:2413 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:14:03  [ main:2413 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fa1336] was not registered for synchronization because synchronization is not active
+2019-01-17 23:14:03  [ main:2414 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1109966680 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will not be managed by Spring
+2019-01-17 23:14:03  [ main:2416 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:14:03  [ main:2418 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:14:03  [ main:2421 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:14:03  [ main:2422 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fa1336]
+2019-01-17 23:15:31  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:15:53  [ main:22802 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:15:53  [ main:22821 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a]
+2019-01-17 23:15:53  [ main:22852 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@745287727 wrapping com.mysql.cj.jdbc.ConnectionImpl@2478b629] will be managed by Spring
+2019-01-17 23:15:53  [ main:22919 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:15:54  [ main:23279 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:15:54  [ main:23287 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:15:54  [ main:23355 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a]
+2019-01-17 23:16:38  [ main:67566 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a] from current transaction
+2019-01-17 23:16:38  [ main:67723 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a]
+2019-01-17 23:17:01  [ main:90841 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a]
+2019-01-17 23:17:01  [ main:90842 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a62062a]
+2019-01-17 23:17:01  [ main:90870 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:17:01  [ main:90871 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67]
+2019-01-17 23:17:01  [ main:90876 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1339507235 wrapping com.mysql.cj.jdbc.ConnectionImpl@2478b629] will be managed by Spring
+2019-01-17 23:17:01  [ main:90876 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:17:01  [ main:90878 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:17:01  [ main:90908 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:17:01  [ main:90910 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67]
+2019-01-17 23:17:01  [ main:90910 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67] from current transaction
+2019-01-17 23:17:01  [ main:90913 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:17:01  [ main:90914 ] - [ DEBUG ]  ==> Parameters: jim_1547738221976(String), 1(Long)
+2019-01-17 23:17:01  [ main:90921 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:17:01  [ main:90922 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67]
+2019-01-17 23:17:01  [ main:90925 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67]
+2019-01-17 23:17:01  [ main:90925 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31ab1e67]
+2019-01-17 23:17:02  [ main:90937 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:17:02  [ main:90938 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dec3f87] was not registered for synchronization because synchronization is not active
+2019-01-17 23:17:02  [ main:90938 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@2053136992 wrapping com.mysql.cj.jdbc.ConnectionImpl@2478b629] will not be managed by Spring
+2019-01-17 23:17:02  [ main:90939 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:17:02  [ main:90940 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:17:02  [ main:90944 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:17:02  [ main:90945 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dec3f87]
+2019-01-17 23:17:47  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:17:50  [ main:2357 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:17:50  [ main:2362 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:17:50  [ main:2374 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1281361915 wrapping com.mysql.cj.jdbc.ConnectionImpl@3e33d73e] will be managed by Spring
+2019-01-17 23:17:50  [ main:2379 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:17:50  [ main:2423 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:17:50  [ main:2461 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:17:50  [ main:2463 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:17:50  [ main:2463 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6] from current transaction
+2019-01-17 23:17:50  [ main:2464 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:17:50  [ main:2465 ] - [ DEBUG ]  ==> Parameters: jim_1547738270152(String), 1(Long)
+2019-01-17 23:17:50  [ main:2467 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:17:50  [ main:2467 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:17:50  [ main:2472 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:17:50  [ main:2472 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:45:02  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:45:04  [ main:2103 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:45:04  [ main:2108 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c]
+2019-01-17 23:45:04  [ main:2123 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@71209097 wrapping com.mysql.cj.jdbc.ConnectionImpl@3c5dbdf8] will be managed by Spring
+2019-01-17 23:45:04  [ main:2131 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:45:04  [ main:2188 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:45:04  [ main:2193 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:45:04  [ main:2227 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c]
+2019-01-17 23:45:04  [ main:2228 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c] from current transaction
+2019-01-17 23:45:04  [ main:2276 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c]
+2019-01-17 23:45:04  [ main:2292 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c]
+2019-01-17 23:45:04  [ main:2293 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6403e24c]
+2019-01-17 23:45:04  [ main:2312 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:45:04  [ main:2313 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20]
+2019-01-17 23:45:04  [ main:2316 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@967343730 wrapping com.mysql.cj.jdbc.ConnectionImpl@3c5dbdf8] will be managed by Spring
+2019-01-17 23:45:04  [ main:2317 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:45:04  [ main:2319 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:45:05  [ main:2339 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:45:05  [ main:2341 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20]
+2019-01-17 23:45:05  [ main:2341 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20] from current transaction
+2019-01-17 23:45:05  [ main:2342 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:45:05  [ main:2346 ] - [ DEBUG ]  ==> Parameters: jim_1547739905004(String), 1(Long)
+2019-01-17 23:45:05  [ main:2348 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:45:05  [ main:2348 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20]
+2019-01-17 23:45:05  [ main:2352 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20]
+2019-01-17 23:45:05  [ main:2353 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44f24a20]
+2019-01-17 23:45:05  [ main:2359 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:45:05  [ main:2360 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4228bf58] was not registered for synchronization because synchronization is not active
+2019-01-17 23:45:05  [ main:2361 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1756988236 wrapping com.mysql.cj.jdbc.ConnectionImpl@3c5dbdf8] will not be managed by Spring
+2019-01-17 23:45:05  [ main:2361 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:45:05  [ main:2363 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:45:05  [ main:2365 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:45:05  [ main:2366 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4228bf58]
+2019-01-17 23:47:27  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:47:29  [ main:2253 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:47:29  [ main:2260 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:47:30  [ main:2272 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1424188812 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will be managed by Spring
+2019-01-17 23:47:30  [ main:2277 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:47:30  [ main:2330 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:47:30  [ main:2335 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:47:30  [ main:2358 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:47:30  [ main:2359 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762] from current transaction
+2019-01-17 23:47:30  [ main:2391 ] - [ DEBUG ]  ==>  Preparing: select * from user WHERE name=? 
+2019-01-17 23:47:30  [ main:2392 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String)
+2019-01-17 23:47:30  [ main:2404 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:47:30  [ main:2405 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:47:30  [ main:2411 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:47:30  [ main:2411 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2643d762]
+2019-01-17 23:47:30  [ main:2421 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:47:30  [ main:2423 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4]
+2019-01-17 23:47:30  [ main:2424 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1057841208 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will be managed by Spring
+2019-01-17 23:47:30  [ main:2425 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:47:30  [ main:2426 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:47:30  [ main:2428 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:47:30  [ main:2429 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4]
+2019-01-17 23:47:30  [ main:2430 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4] from current transaction
+2019-01-17 23:47:30  [ main:2430 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:47:30  [ main:2431 ] - [ DEBUG ]  ==> Parameters: jim_1547740050162(String), 1(Long)
+2019-01-17 23:47:30  [ main:2433 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:47:30  [ main:2434 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4]
+2019-01-17 23:47:30  [ main:2437 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4]
+2019-01-17 23:47:30  [ main:2437 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a082ff4]
+2019-01-17 23:47:30  [ main:2444 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:47:30  [ main:2444 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b948f3e] was not registered for synchronization because synchronization is not active
+2019-01-17 23:47:30  [ main:2445 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@793521364 wrapping com.mysql.cj.jdbc.ConnectionImpl@43e9089] will not be managed by Spring
+2019-01-17 23:47:30  [ main:2446 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:47:30  [ main:2447 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:47:30  [ main:2452 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:47:30  [ main:2453 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b948f3e]
+2019-01-17 23:53:06  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:53:09  [ main:2537 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:53:09  [ main:2545 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:53:09  [ main:2555 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@215690645 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:53:09  [ main:2561 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:53:09  [ main:2612 ] - [ DEBUG ]  ==> Parameters: city(String), 123456(String)
+2019-01-17 23:53:09  [ main:2621 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:53:09  [ main:2624 ] - [ DEBUG ]  ==>  Preparing: select LAST_INSERT_ID() 
+2019-01-17 23:53:09  [ main:2626 ] - [ DEBUG ]  ==> Parameters: 
+2019-01-17 23:53:09  [ main:2669 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:53:09  [ main:2672 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:53:09  [ main:2692 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:53:09  [ main:2692 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:53:09  [ main:2711 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:53:09  [ main:2712 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9]
+2019-01-17 23:53:09  [ main:2715 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1417941371 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:53:09  [ main:2718 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:53:09  [ main:2720 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:53:09  [ main:2724 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:53:09  [ main:2729 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9]
+2019-01-17 23:53:09  [ main:2731 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9] from current transaction
+2019-01-17 23:53:09  [ main:2789 ] - [ DEBUG ]  ==>  Preparing: select * from user WHERE name=? 
+2019-01-17 23:53:09  [ main:2790 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String)
+2019-01-17 23:53:09  [ main:2793 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:53:09  [ main:2794 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9]
+2019-01-17 23:53:09  [ main:2798 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9]
+2019-01-17 23:53:09  [ main:2801 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ec8f4b9]
+2019-01-17 23:53:09  [ main:2814 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:53:09  [ main:2814 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b]
+2019-01-17 23:53:09  [ main:2821 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1742814160 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:53:09  [ main:2822 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:53:09  [ main:2823 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:53:09  [ main:2827 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:53:09  [ main:2827 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b]
+2019-01-17 23:53:09  [ main:2828 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b] from current transaction
+2019-01-17 23:53:09  [ main:2828 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:53:09  [ main:2829 ] - [ DEBUG ]  ==> Parameters: jim_1547740389385(String), 1(Long)
+2019-01-17 23:53:09  [ main:2830 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:53:09  [ main:2831 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b]
+2019-01-17 23:53:09  [ main:2832 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b]
+2019-01-17 23:53:09  [ main:2833 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1dc3502b]
+2019-01-17 23:53:09  [ main:2845 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:53:09  [ main:2846 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde] was not registered for synchronization because synchronization is not active
+2019-01-17 23:53:09  [ main:2847 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1872034717 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will not be managed by Spring
+2019-01-17 23:53:09  [ main:2848 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:53:09  [ main:2849 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:53:09  [ main:2851 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:53:09  [ main:2853 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:56  [ main:1 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-01-17 23:56:58  [ main:2458 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:56:58  [ main:2465 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:56:58  [ main:2474 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@215690645 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:56:58  [ main:2479 ] - [ DEBUG ]  ==>  Preparing: delete from user where id=? 
+2019-01-17 23:56:58  [ main:2523 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:56:58  [ main:2532 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:56:58  [ main:2533 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:56:58  [ main:2538 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:56:58  [ main:2538 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f46fa6]
+2019-01-17 23:56:58  [ main:2548 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:56:58  [ main:2549 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b5e7036]
+2019-01-17 23:56:58  [ main:2549 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1828676092 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:56:58  [ main:2550 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:56:58  [ main:2552 ] - [ DEBUG ]  ==> Parameters: city(String), 123456(String)
+2019-01-17 23:56:58  [ main:2554 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:56:58  [ main:2558 ] - [ DEBUG ]  ==>  Preparing: select LAST_INSERT_ID() 
+2019-01-17 23:56:58  [ main:2559 ] - [ DEBUG ]  ==> Parameters: 
+2019-01-17 23:56:58  [ main:2595 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:56:58  [ main:2596 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b5e7036]
+2019-01-17 23:56:58  [ main:2607 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b5e7036]
+2019-01-17 23:56:58  [ main:2608 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b5e7036]
+2019-01-17 23:56:58  [ main:2614 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:56:58  [ main:2615 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64]
+2019-01-17 23:56:58  [ main:2615 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1144979403 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:56:58  [ main:2616 ] - [ DEBUG ]  ==>  Preparing: insert into user (name,pwd) value (?,?) 
+2019-01-17 23:56:58  [ main:2617 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String), 123456(String)
+2019-01-17 23:56:58  [ main:2619 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:56:58  [ main:2621 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64]
+2019-01-17 23:56:58  [ main:2622 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64] from current transaction
+2019-01-17 23:56:59  [ main:2666 ] - [ DEBUG ]  ==>  Preparing: select * from user WHERE name=? 
+2019-01-17 23:56:59  [ main:2667 ] - [ DEBUG ]  ==> Parameters: hanmeimei(String)
+2019-01-17 23:56:59  [ main:2672 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:56:59  [ main:2676 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64]
+2019-01-17 23:56:59  [ main:2679 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64]
+2019-01-17 23:56:59  [ main:2680 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cd9aa64]
+2019-01-17 23:56:59  [ main:2688 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:56:59  [ main:2689 ] - [ DEBUG ]  Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:59  [ main:2690 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@402264886 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will be managed by Spring
+2019-01-17 23:56:59  [ main:2691 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:56:59  [ main:2692 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:56:59  [ main:2695 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:56:59  [ main:2698 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:59  [ main:2699 ] - [ DEBUG ]  Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde] from current transaction
+2019-01-17 23:56:59  [ main:2700 ] - [ DEBUG ]  ==>  Preparing: update user set name=? where id=? 
+2019-01-17 23:56:59  [ main:2701 ] - [ DEBUG ]  ==> Parameters: jim_1547740619050(String), 1(Long)
+2019-01-17 23:56:59  [ main:2704 ] - [ DEBUG ]  <==    Updates: 1
+2019-01-17 23:56:59  [ main:2705 ] - [ DEBUG ]  Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:59  [ main:2708 ] - [ DEBUG ]  Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:59  [ main:2708 ] - [ DEBUG ]  Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1457fde]
+2019-01-17 23:56:59  [ main:2714 ] - [ DEBUG ]  Creating a new SqlSession
+2019-01-17 23:56:59  [ main:2715 ] - [ DEBUG ]  SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20b9d5d5] was not registered for synchronization because synchronization is not active
+2019-01-17 23:56:59  [ main:2716 ] - [ DEBUG ]  JDBC Connection [HikariProxyConnection@1729958231 wrapping com.mysql.cj.jdbc.ConnectionImpl@122d6c22] will not be managed by Spring
+2019-01-17 23:56:59  [ main:2717 ] - [ DEBUG ]  ==>  Preparing: select * from user where id = ? 
+2019-01-17 23:56:59  [ main:2718 ] - [ DEBUG ]  ==> Parameters: 1(Long)
+2019-01-17 23:56:59  [ main:2720 ] - [ DEBUG ]  <==      Total: 1
+2019-01-17 23:56:59  [ main:2721 ] - [ DEBUG ]  Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20b9d5d5]

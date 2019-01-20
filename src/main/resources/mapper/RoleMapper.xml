@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zn.demo.mapper.RoleMapper" >
+	<!-- role的基本字段查询 -->
+	<resultMap type="Role" id="roleBaseMap">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+	</resultMap>
+	
+	<!-- 组装role和privilege的基本字段 -->
+	<resultMap type="Role" id="roleMap" extends="roleBaseMap">
+		<!-- resultMap直接指定privilegeMapper.xml的namespace+id来唯一指定具体实现映射的resultMap -->
+		<!-- 未省略collection子查询基础字段的映射 -->
+		<collection property="privileges" columnPrefix="privilege_" fetchType="lazy" resultMap="com.zn.demo.mapper.PrivilegeMapper.privilegeBaseMap" />
+	</resultMap>
+	
+	<!-- 组装role和privilege的基本字段 -->
+	<resultMap type="Role" id="roleMap2" extends="roleBaseMap">
+		<!-- resultMap直接指定privilegeMapper.xml的namespace+id来唯一指定具体实现映射的resultMap -->
+		<!-- 省略了privilege子查询的基础字段，导致name映射为null -->
+		<collection property="privileges" columnPrefix="privilege_" fetchType="lazy" resultMap="com.zn.demo.mapper.PrivilegeMapper.privilegeBaseMap2" />
+	</resultMap>
+
+	<select id="findById" resultMap="roleMap">
+		select 
+			r.id,
+			r.name,
+			p.id privilege_id,
+			p.name privilege_name
+		from role r 
+			inner join role_privilege rp
+			on r.id=rp.role_id
+			inner join privilege p
+			on rp.privilege_id=p.id
+		
+		where r.id=#{role_id}
+	</select>
+	
+	<select id="findById2" resultMap="roleMap2">
+		select 
+			r.id,
+			r.name,
+			p.id privilege_id,
+			p.name privilege_name
+		from role r 
+			inner join role_privilege rp
+			on r.id=rp.role_id
+			inner join privilege p
+			on rp.privilege_id=p.id
+		
+		where r.id=#{role_id}
+	</select>
+
+</mapper>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zn.demo.mapper.UserMapper" >
+	<resultMap type="User" id="userBaseMap">
+		<id column="id" property="id"/>
+		<result property="name" column="name"/>
+		<result property="pwd" column="pwd"/>
+	</resultMap>
+	
+	<resultMap type="User" id="userMap" extends="userBaseMap">
+		<association property="school" columnPrefix="school_" fetchType="lazy" resultMap="com.zn.demo.mapper.SchoolMapper.schoolBaseMap"></association>
+		<collection property="roles" columnPrefix="role_" fetchType="lazy" resultMap="com.zn.demo.mapper.RoleMapper.roleMap"></collection>
+	</resultMap>
+	
+	<!-- 查询1对1映射，方式1，用association指定对象，不能达到复用的目的 -->
+	<resultMap type="User" id="userSchoolMap" extends="userBaseMap">
+		<!-- 明确指定是哪个实体类，属性名 -->
+		<association property="school" javaType="School" columnPrefix="school_" fetchType="lazy">
+			<result property="id" column="id"/>
+			<result property="name" column="name"/>
+		</association>
+	</resultMap>
+	
+	<!-- 推荐：查询1对1映射，方式2，引用其他resultMap，可以达到复用的目的 -->
+	<resultMap type="User" id="userSchoolMap2" extends="userBaseMap">
+		<association property="school" columnPrefix="school_" fetchType="lazy" resultMap="com.zn.demo.mapper.SchoolMapper.schoolBaseMap"></association>
+	</resultMap>
+	
+	<!-- 查询1对1映射，方式3 ，单独指定属性的字段，不能达到复用的目的-->
+	<resultMap type="User" id="userSchoolMap3" extends="userBaseMap">
+		<!-- 单独指定school属性字段的值 -->
+		<result property="school.id" column="school_id" />
+		<result property="school.name" column="school.name"/>
+	</resultMap>
+	
+	<!-- 查询1对1映射，方式4 ,多次执行sql子查询-->
+	<resultMap type="User" id="userSchoolMap4" extends="userBaseMap">
+		<!-- 将本次主查询结果的school_id,赋值给select指定的那个子查询的参数#{xxxx} -->
+		<association property="shcool" columnPrefix="school_" fetchType="lazy" column="{id=shcool_id}" select="com.zn.demo.mapper.SchoolMapper.findById"></association>
+	</resultMap>
+	
+	<select id="findById" resultMap="userBaseMap" >
+		select * from user
+		where id = #{id}
+	</select>
+	
+	<select id="findAll" resultMap="userBaseMap">
+		select * from user
+	</select>
+	
+	<!-- 因为使用了@param，所以需要通过#{user.name}得到值 -->
+	<select id="findOne" resultMap="userBaseMap">
+		select * from user
+		<where>
+			<if test="user.name!=null and user.name!=''">
+			and name=#{user.name}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 把关联表中需要的数据都查出来，这里查询了user，role，privilege3张表的字段 -->
+	<!-- 由于查询privilege时，嵌套了两层collection，每次都有指定映射别名前缀，所以查询语句中要增加 role_privilege_ -->
+	<select id="findInfo" resultMap="userMap">
+		select 
+		u.id,
+		u.name,
+		r.id role_id,
+		r.name role_name,
+		p.id role_privilege_id,
+		p.name role_privilege_name,
+		s.id school_id,
+		s.name school_name
+		from user u
+			inner join user_role ur on u.id=ur.user_id
+			inner join role r on ur.role_id=r.id
+			inner join role_privilege rp on r.id=rp.role_id
+			inner join privilege p on rp.privilege_id=p.id
+			inner join school s on s.id=u.school_id
+		where u.id=#{id}
+	</select>
+	
+	<!-- 查询1对1，方式1 -->
+	<select id="findUserSchool" resultMap="userSchoolMap">
+		select 
+			u.id,
+			u.name,
+			s.id school_id,
+			s.name school_name
+		from user u
+		inner join school s
+		on u.school_id=s.id
+		where u.id=#{id}
+	</select>
+	
+	<!-- 查询1对1，方式2 ，sql语句一致-->
+	<select id="findUserSchool2" resultMap="userSchoolMap2">
+		select 
+			u.id,
+			u.name,
+			s.id school_id,
+			s.name school_name
+		from user u
+		inner join school s
+		on u.school_id=s.id
+		where u.id=#{id}
+	</select>
+	
+	<!-- 查询1对1，方式3 ，sql语句一致-->
+	<select id="findUserSchool3" resultMap="userSchoolMap3">
+		select 
+			u.id,
+			u.name,
+			s.id school_id,
+			s.name school_name
+		from user u
+		inner join school s
+		on u.school_id=s.id
+		where u.id=#{id}
+	</select>
+	
+	<!-- 查询1对1，方式4 ，sql语句一致-->
+	<select id="findUserSchool4" resultMap="userSchoolMap4">
+		select 
+			u.id,
+			u.name,
+			s.id school_id,
+			s.name school_name
+		from user u
+		inner join school s
+		on u.school_id=s.id
+		where u.id=#{id}
+	</select>
+	
+	<insert id="save" useGeneratedKeys="true" keyProperty="id">
+		insert into user (name,pwd)
+		value (#{name},#{pwd})
+	</insert>
+	
+	<insert id="save2">
+		insert into user (name,pwd)
+		value (#{name},#{pwd})
+		
+		<selectKey keyColumn="id" keyProperty="id" order="AFTER" resultType="long">
+			select LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+		update user 
+		<set>
+			name=#{name}
+		</set>
+		where id=#{id}
+	</update>
+	
+	<delete id="delById">
+		delete from user where id=#{id}
+	</delete>
+	
+</mapper>

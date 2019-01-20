@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zn.demo.mapper.PrivilegeMapper" >
+	<!-- 启用mybatis自带二级缓存。Map为只读，单例方式返回。序列化为默认的可读写方式返回新对象 -->
+	<!-- <cache readOnly="true"></cache> -->
+	<!-- 启用ehcache二级缓存，所有缓存配置都会以ehcache.xml为准 -->
+	<cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>
+	<!-- 设置业务相同的表为同一个命名空间，二级缓存就绑定在同一个命名空间下了。防止脏读：多表查询后保存在二级缓存A下，更新某张表时清除的是二级缓存B的数据 -->
+	<!-- <cache-ref namespace="xxx.xxxx.xxx.xxx.UserMapper"/> -->
+	
+	<!-- privilege基本字段映射 -->
+	<resultMap id="privilegeBaseMap" type="Privilege">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+	</resultMap>
+	
+	<!-- privilege基本字段映射,基础字段被省略，会造成collection引用的时候，造成name数据无法绑定，单表查询是没有问题的。 -->
+	<resultMap id="privilegeBaseMap2" type="Privilege">
+		<id property="id" column="id"/>
+		<!-- 基础字段省略 -->
+		<!-- <result property="name" column="name"/> -->
+	</resultMap>
+	
+	<select id="findById" resultMap="privilegeBaseMap">
+		select * from privilege where id=#{id}
+	</select>
+	
+	
+	<select id="findAll" resultMap="privilegeBaseMap">
+		select 
+		id,
+		name
+		from privilege
+	</select>
+	
+	<select id="findAllByRoleId" resultMap="privilegeBaseMap">
+		select 
+			p.id,
+			p.name
+		from 
+			privilege p
+			inner join role_privilege m
+			on p.id=m.privilege_id
+		where m.role_id=#{role_id}
+	</select>
+</mapper>
