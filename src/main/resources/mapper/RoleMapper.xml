@@ -22,6 +22,11 @@
 		<!-- 省略了privilege子查询的基础字段，导致name映射为null -->
 		<collection property="privileges" columnPrefix="privilege_" fetchType="lazy" resultMap="com.zn.demo.mapper.PrivilegeMapper.privilegeBaseMap2" />
 	</resultMap>
+	
+	<!-- 配置嵌套查询，实现懒加载。通过配置select实现。column的解释：将当前主查询结果的privilege_id赋值给子查询findById的参数id -->
+	<resultMap type="Role" id="roleMapLazyLoad" extends="roleBaseMap">
+		<collection property="privileges" columnPrefix="privilege_" fetchType="lazy" select="com.zn.demo.mapper.PrivilegeMapper.findAllByRoleId" column="{role_id=id}"></collection>
+	</resultMap>
 
 	<select id="findById" resultMap="roleMap">
 		select 
@@ -50,6 +55,15 @@
 			inner join privilege p
 			on rp.privilege_id=p.id
 		
+		where r.id=#{role_id}
+	</select>
+	
+	<!-- 查询语句中，不需要查子查询的数据。即不需要查询权限的字段。否则会出现3条记录。无法和接口的返回值数量匹配上 -->
+	<select id="findByIdLazyLoadPrivilege" resultMap="roleMapLazyLoad">
+		select 
+			r.id,
+			r.name
+		from role r 
 		where r.id=#{role_id}
 	</select>
 
